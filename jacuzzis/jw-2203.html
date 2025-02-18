@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW-2203 - AquaRelax.es</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AquaRelax.es</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#zwemspas">Zwemspas</a>
+            <a href="/#jacuzzis">Jacuzzi's</a>
+            <a href="over-ons.html">Over Ons</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <h2>JW-2203</h2>
+            <div class="image-gallery">
+                <img src="images/jw-2203_1.jpg" alt="JW-2203 Afbeelding 1" class="active">
+                <img src="images/jw-2203_2.jpg" alt="JW-2203 Afbeelding 2">
+                <img src="images/jw-2203_3.jpg" alt="JW-2203 Afbeelding 3">
+                <button class="prev-btn">Vorige</button>
+                <button class="next-btn">Volgende</button>
+            </div>
+            <div class="product-info">
+                <h3>Compacte Luxe voor Ultieme Ontspanning: De JW-2203 Jacuzzi</h3>
+                <p>
+                    Droomt u van een eigen spa-oase, maar heeft u beperkte ruimte? De JW-2203 is de perfecte oplossing. Deze compacte, maar luxueuze jacuzzi biedt alle comfort en ontspanning die u zoekt, zonder dat u een grote tuin nodig heeft. Met ruimte voor drie personen is de JW-2203 ideaal voor intieme momenten van ontspanning, quality time met uw partner of gezellige bijeenkomsten met vrienden.
+                </p>
+                <p>
+                    Laat u verrassen door de 56 krachtige jets die uw lichaam masseren en elke spanning weg laten vloeien. De slimme combinatie van verschillende jet-types zorgt voor een veelzijdige massage-ervaring, van diepe spierontspanning tot een zachte, kalmerende massage. Geniet van de rustgevende ambiance die wordt gecreëerd door de 24 perimeter LED-verlichting, de spray-verlichting en de onderwaterlamp.
+                </p>
+                <p>
+                    Het gebruiksvriendelijke Balboa-besturingssysteem stelt u in staat om de temperatuur, de jets en andere functies eenvoudig aan te passen. Creëer de perfecte spa-ervaring die bij uw stemming past. Zet uw favoriete muziek aan via het optionele Bluetooth-muzieksysteem en geniet van een moment van pure ontspanning.
+                </p>
+                <p>
+                    De JW-2203 is niet alleen een lust voor het oog, maar ook een investering in uw welzijn. Regelmatig gebruik van een jacuzzi heeft bewezen stress te verminderen, spierpijn te verlichten en de algehele gezondheid te verbeteren. Gun uzelf de luxe en verwennerij die u verdient en ervaar de transformatie die de JW-2203 in uw leven kan brengen.
+                </p>
+
+                <button class="specificaties-knop" onclick="toggleSpecificaties()">Specificaties</button>
+                <div class="specificaties-venster" id="specificatiesVenster" style="display: none;">
+                    <h4>Specificaties:</h4>
+                    <ul>
+                      <li>Afmetingen: 2100*1580*780mm</li>
+                      <li>Watercapaciteit: 850L</li>
+                      <li>Capaciteit: 3 personen (2 zitplaatsen + 1 lounge)</li>
+                      <li>Elektrisch: 110-380V, 50hz/60hz</li>
+                      <li>Besturingssysteem: USA Balboa BP200G1</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AquaRelax.es</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleSpecificaties() {
+            var specificatiesVenster = document.getElementById('specificatiesVenster');
+            if (specificatiesVenster.style.display === "none") {
+                specificatiesVenster.style.display = "block";
+            } else {
+                specificatiesVenster.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

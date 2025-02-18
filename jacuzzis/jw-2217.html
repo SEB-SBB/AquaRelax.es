@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW-2217 - AquaRelax.es</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AquaRelax.es</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#zwemspas">Zwemspas</a>
+            <a href="/#jacuzzis">Jacuzzi's</a>
+            <a href="over-ons.html">Over Ons</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <h2>JW-2217</h2>
+            <div class="image-gallery">
+                <img src="images/jw-2217_1.jpg" alt="JW-2217 Afbeelding 1" class="active">
+                <img src="images/jw-2217_2.jpg" alt="JW-2217 Afbeelding 2">
+                <img src="images/jw-2217_3.jpg" alt="JW-2217 Afbeelding 3">
+                <button class="prev-btn">Vorige</button>
+                <button class="next-btn">Volgende</button>
+            </div>
+            <div class="product-info">
+                <h3>Ruime Zwemspa voor het Hele Gezin: De JW-2217</h3>
+                <p>
+                    Ervaar de ultieme luxe en ontspanning met de JW-2217 zwemspa. Deze ruime zwemspa biedt voldoende ruimte voor het hele gezin om samen te genieten van ontspannende momenten. De JW-2217 is ontworpen om een perfecte balans te bieden tussen comfort en functionaliteit, waardoor het de ideale keuze is voor gezinnen die willen genieten van quality time.
+                </p>
+                <p>
+                    Met krachtige jets die een diepgaande massage bieden, helpt de JW-2217 om stress en spanning weg te nemen. De verschillende jet-types zorgen voor een veelzijdige massage-ervaring die aan al uw behoeften voldoet. Geniet van de rustgevende sfeer die wordt gecreëerd door de LED-verlichting en de ingebouwde audio-installatie.
+                </p>
+                <p>
+                    De JW-2217 is uitgerust met het geavanceerde Balboa-besturingssysteem, waarmee u eenvoudig de temperatuur, de jets en andere functies kunt aanpassen. Of u nu wilt ontspannen na een lange dag of een feestje wilt organiseren, de JW-2217 biedt de perfecte oplossing.
+                </p>
+                <p>
+                    Investeer in uw welzijn en creëer onvergetelijke herinneringen met de JW-2217 zwemspa. Regelmatig gebruik van een zwemspa heeft bewezen positieve effecten op de gezondheid, zoals het verminderen van stress, het verlichten van spierpijn en het verbeteren van de algehele gezondheid.
+                </p>
+
+                <button class="specificaties-knop" onclick="toggleSpecificaties()">Specificaties</button>
+                <div class="specificaties-venster" id="specificatiesVenster" style="display: none;">
+                    <h4>Specificaties:</h4>
+                    <ul>
+                      <li>Afmetingen: 5000*2200*1500mm</li>
+                      <li>Watercapaciteit: 3200L</li>
+                      <li>Capaciteit: 6 personen</li>
+                      <li>Elektrisch: 220-380V, 50hz/60hz</li>
+                      <li>Besturingssysteem: USA Balboa BP200G1</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AquaRelax.es</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleSpecificaties() {
+            var specificatiesVenster = document.getElementById('specificatiesVenster');
+            if (specificatiesVenster.style.display === "none") {
+                specificatiesVenster.style.display = "block";
+            } else {
+                specificatiesVenster.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
