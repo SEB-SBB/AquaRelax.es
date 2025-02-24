@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW-2229 - AquaRelax.es</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Stijl voor het logo */
+        .logo {
+            max-width: 200px; /* Aanpassen naar gewenste grootte */
+            height: auto;
+            float: left; /* Zorgt ervoor dat het logo linksboven staat */
+            margin-right: 20px; /* Ruimte tussen logo en titel */
+        }
+        header {
+            display: flex; /* Gebruik flexbox voor de header */
+            align-items: center; /* Verticale centrering van logo en titel */
+            padding: 10px; /* Wat padding aan de header toevoegen */
+            background-color: #007bff;
+            color: white;
+        }
+        h1 {
+            margin: 0; /* Verwijder standaard marge van de titel */
+        }
+        nav {
+            clear: both; /* Zorgt ervoor dat de navigatie onder het logo en de titel komt */
+            text-align: center; /* Centreert de navigatie */
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .slider {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            height: 400px; /* Fixed height for the slider */
+        }
+        .slider img {
+            width: 100%;
+            height: 100%; /* Ensure all images fill the slider container */
+            display: none;
+            object-fit: cover; /* Ensure images cover the slider area */
+        }
+        .slider img.active {
+            display: block;
+        }
+        .slider .prev-btn, .slider .next-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .slider .next-btn {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .slider .prev-btn:hover, .slider .next-btn:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+        .product-details-text {
+            flex: 1;
+            max-width: 45%; /* Beperk de breedte van de tekstcontainer */
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        .details-container {
+            margin-top: 20px;
+            max-width: 45%; /* Beperk de breedte van de specificatiecontainer */
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            display: none; /* Initially hide the tables */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .order-button, .specs-button {
+            background-color: #007bff; /* Voorbeeldkleur */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .benefits {
+            margin-top: 20px;
+        }
+        .benefits ul {
+            list-style-type: disc; /* Gebruik bullet points */
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        let currentImageIndex = 0;
+        let images;
+        let interval;
+
+        function showImage(index) {
+            if (index >= images.length) {
+                currentImageIndex = 0;
+            } else if (index < 0) {
+                currentImageIndex = images.length - 1;
+            } else {
+                currentImageIndex = index;
+            }
+            images.forEach((img, idx) => {
+                img.classList.toggle('active', idx === currentImageIndex);
+            });
+        }
+
+        function nextImage() {
+            showImage(currentImageIndex + 1);
+        }
+
+        function prevImage() {
+            showImage(currentImageIndex - 1);
+        }
+
+        function startSlideshow() {
+            interval = setInterval(nextImage, 3000); // Change image every 3 seconds
+        }
+
+        function stopSlideshow() {
+            clearInterval(interval);
+        }
+
+        function toggleSpecifications() {
+            const tables = document.querySelectorAll('table');
+            tables.forEach(table => {
+                table.style.display = table.style.display === 'none' ? 'table' : 'none';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            images = document.querySelectorAll('.slider img');
+            showImage(currentImageIndex);
+            startSlideshow();
+            document.querySelector('.slider').addEventListener('mouseenter', stopSlideshow);
+            document.querySelector('.slider').addEventListener('mouseleave', startSlideshow);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="images/aquarelax_header_logo.png" alt="AquaRelax Logo" class="logo">
+        <h1>AquaRelax.es</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#zwemspas">Zwemspas</a>
+            <a href="index.html#jacuzzis">Jacuzzi's</a>
+            <a href="over-ons.html">Over Ons</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="slider">
+            <img src="images/jw-2229-1.png" alt="JW-2229 Jacuzzi" class="active">
+            <img src="images/jw-2229-2.png" alt="JW-2229 Jacuzzi">
+            <img src="images/jw-2229-3.png" alt="JW-2229 Jacuzzi">
+            <button class="prev-btn" onclick="prevImage()">&#10094;</button>
+            <button class="next-btn" onclick="nextImage()">&#10095;</button>
+        </div>
+        <div class="content">
+            <div class="product-details-text">
+                <h2>JW-2229 Jacuzzi</h2>
+
+                <div class="promo-text">
+                    <h3>✨ Special Offer! ✨</h3>
+                    <p>Get a <strong>10% discount</strong> on the JW-2229 Jacuzzi this month only! Create your own backyard oasis.</p>
+                    <p>Use code <strong>RELAX10</strong> at checkout.</p>
+                </div>
+                
+                <div class="benefits">
+                    <h3>Compacte Luxe voor Ultieme Ontspanning: De JW-2229 Jacuzzi</h3>
+                    <p>
+                        Droomt u van een eigen spa-oase, maar heeft u beperkte ruimte? De JW-2229 is de perfecte oplossing. Deze compacte, maar luxueuze jacuzzi biedt alle comfort en ontspanning die u zoekt, zonder dat u een grote tuin nodig heeft. Met ruimte voor vier personen is de JW-2229 ideaal voor intieme momenten van ontspanning, quality time met uw partner of gezellige bijeenkomsten met vrienden.
+                    </p>
+                    <p>
+                        Laat u verrassen door de 25 krachtige jets die uw lichaam masseren en elke spanning weg laten vloeien. De slimme combinatie van verschillende jet-types zorgt voor een veelzijdige massage-ervaring, van diepe spierontspanning tot een zachte, kalmerende massage. Geniet van de rustgevende ambiance die wordt gecreëerd door de 6 perimeter LED-verlichting, de EVA hoofdsteunen en de onderwaterlamp.
+                    </p>
+                    <p>
+                        Het gebruiksvriendelijke Balboa-besturingssysteem stelt u in staat om de temperatuur, de jets en andere functies eenvoudig aan te passen. Creëer de perfecte spa-ervaring die bij uw stemming past. Zet uw favoriete muziek aan via het optionele Bluetooth-muzieksysteem en geniet van een moment van pure ontspanning.
+                    </p>
+                    <p>
+                        De JW-2229 is niet alleen een lust voor het oog, maar ook een investering in uw welzijn. Regelmatig gebruik van een jacuzzi heeft bewezen stress te verminderen, spierpijn te verlichten en de algehele gezondheid te verbeteren. Gun uzelf de luxe en verwennerij die u verdient en ervaar de transformatie die de JW-2229 in uw leven kan brengen.
+                    </p>
+
+                    <div class="details-container">
+                        <button class="specs-button" onclick="toggleSpecifications()">Show Specifications</button>
+                        <div class="details">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">SPECIFICATIONS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Afmetingen</td>
+                                        <td>1900x1700x780mm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Watercapaciteit</td>
+                                        <td>850L</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Capaciteit</td>
+                                        <td>4 personen (2 zitplaatsen + 2 lounges)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">ELECTRICS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Voltage</td>
+                                        <td>110-380V, 50hz/60hz</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Besturingssysteem</td>
+                                        <td>(USA Balboa) BP200G1+TP500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Heater</td>
+                                        <td>(USA Balboa) 1PC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Massage pump</td>
+                                        <td>3HP *1pc 2 speed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">JET CONFIGURATIONS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Total quantity of jets</td>
+                                        <td>25pcs (304 stainless steel)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.5” jets</td>
+                                        <td>6pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1” hydrotherapy jets</td>
+                                        <td>19pcs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">STRUCTURE & PLUMBING</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Shell</td>
+                                        <td>Acrylic</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Skirt</td>
+                                        <td>PS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Supporting frame</td>
+                                        <td>Stainless steel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Filter</td>
+                                        <td>1PC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ozonizer</td>
+                                        <td>1pc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Perimeter LED lights</td>
+                                        <td>6pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>EVA Headrest</td>
+                                        <td>2pcs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Underwater lights</td>
+                                        <td>3"*1pc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Air valve</td>
+                                        <td>2pcs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="options">
+                        <h3>Options</h3>
+                        <label><input type="checkbox"> USA Aristech Acrylic: $200</label>
+                        <label><input type="checkbox"> Blower: $100 (BP6013G3/BP2100G1)</label>
+                        <label><input type="checkbox"> Bluetooth MP3 with speakers: $120</label>
+                        <label><input type="checkbox"> UV: $50</label>
+                        <label><input type="checkbox"> Heat preservation cover: $150</label>
+                        <label><input type="checkbox"> Cover lift: $150</label>
+                        <label><input type="checkbox"> Ladder: $60</label>
+                        <label><input type="checkbox"> Base: $150</label>
+                        <label><input type="checkbox"> WIFI Module (BP2100): $200</label>
+                        <label><input type="checkbox"> OPTIONAL BALBOA CONTROL SYSTEM: BP6013G3/BP2100G1+TP600: $200</label>
+                    </div>
+
+                    <button class="order-button">ORDER NOW</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AquaRelax.es</p>
+    </footer>
+</body>
+</html>

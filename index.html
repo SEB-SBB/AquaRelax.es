@@ -5,19 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaRelax.es - Uw Jacuzzi Specialist</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Stijl voor het logo */
+        .logo {
+            max-width: 200px; /* Aanpassen naar gewenste grootte */
+            height: auto;
+            float: left; /* Zorgt ervoor dat het logo linksboven staat */
+            margin-right: 20px; /* Ruimte tussen logo en titel */
+        }
+        header {
+            display: flex; /* Gebruik flexbox voor de header */
+            align-items: center; /* Verticale centrering van logo en titel */
+            padding: 10px; /* Wat padding aan de header toevoegen */
+        }
+        h1 {
+            margin: 0; /* Verwijder standaard marge van de titel */
+        }
+        nav {
+            clear: both; /* Zorgt ervoor dat de navigatie onder het logo en de titel komt */
+            text-align: center; /* Centreert de navigatie */
+        }
+        .category-button {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            flex: 1 1 calc(25% - 20px);
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+        .product:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin: 10px 0;
+            color: #007bff;
+        }
+        .product p {
+            color: #555;
+        }
+        .product button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <img src="images/aquarelax_header_logo.png" alt="AquaRelax Logo" class="logo">
         <h1>AquaRelax.es</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="#zwemspas">Zwemspas</a>
             <a href="#jacuzzis">Jacuzzi's</a>
+            <a href="#ijsbaden">IJsbaden</a>
             <a href="over-ons.html">Over Ons</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-
     <main>
         <section id="hero">
             <h2>Geniet van Ultieme Ontspanning</h2>
@@ -28,6 +102,9 @@
 
         <section id="jacuzzis">
             <h2>Jacuzzi's</h2>
+            <div class="category-button">
+                <button onclick="window.location.href='jacuzzis.html'">Meer zien</button>
+            </div>
             <div class="product-container">
                 <div class="product">
                     <img src="images/jw-2203.png" alt="JW-2203">
@@ -36,88 +113,46 @@
                     <button onclick="window.location.href='jw-2203.html'">Meer info</button>
                 </div>
                 <div class="product">
-                    <img src="images/jw-2217_1.jpg" alt="JW-2217">
-                    <h3>JW-2217</h3>
-                    <p>Ruime zwemspa voor het hele gezin.</p>
-                    <button onclick="window.location.href='jw-2217.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2219_1.jpg" alt="JW-2219">
+                    <img src="images/jw-2219_1.png" alt="JW-2219">
                     <h3>JW-2219</h3>
                     <p>Compacte jacuzzi voor intieme ontspanning.</p>
                     <button onclick="window.location.href='jw-2219.html'">Meer info</button>
                 </div>
                 <div class="product">
-                    <img src="images/jw-2220_1.jpg" alt="JW-2220">
+                    <img src="images/jw-2220_1.png" alt="JW-2220">
                     <h3>JW-2220</h3>
                     <p>Compacte jacuzzi voor intieme ontspanning.</p>
                     <button onclick="window.location.href='jw-2220.html'">Meer info</button>
                 </div>
+            </div>
+        </section>
+
+        <section id="ijsbaden">
+            <h2>IJsbaden</h2>
+            <div class="category-button">
+                <button onclick="window.location.href='ijsbaden.html'">Meer zien</button>
+            </div>
+            <div class="product-container">
                 <div class="product">
-                    <img src="images/jw-2221_1.jpg" alt="JW-2221">
+                    <img src="images/jw-2221_1.png" alt="JW-2221">
                     <h3>JW-2221</h3>
                     <p>IJsbaden voor ultieme verfrissing en herstel.</p>
                     <button onclick="window.location.href='jw-2221.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2222_1.jpg" alt="JW-2222">
-                    <h3>JW-2222</h3>
-                    <p>Ruime jacuzzi voor twee personen.</p>
-                    <button onclick="window.location.href='jw-2222.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2223_1.jpg" alt="JW-2223">
-                    <h3>JW-2223</h3>
-                    <p>Luxe jacuzzi voor vijf personen.</p>
-                    <button onclick="window.location.href='jw-2223.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2225_1.jpg" alt="JW-2225">
-                    <h3>JW-2225</h3>
-                    <p>Robuuste jacuzzi voor drie personen.</p>
-                    <button onclick="window.location.href='jw-2225.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2226_1.jpg" alt="JW-2226">
-                    <h3>JW-2226</h3>
-                    <p>Compacte jacuzzi voor drie personen.</p>
-                    <button onclick="window.location.href='jw-2226.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2227_1.jpg" alt="JW-2227">
-                    <h3>JW-2227</h3>
-                    <p>Ruime jacuzzi voor zes personen.</p>
-                    <button onclick="window.location.href='jw-2227.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2228_1.jpg" alt="JW-2228">
-                    <h3>JW-2228</h3>
-                    <p>Robuuste jacuzzi voor vijf personen.</p>
-                    <button onclick="window.location.href='jw-2228.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2229_1.jpg" alt="JW-2229">
-                    <h3>JW-2229</h3>
-                    <p>Ruime jacuzzi voor vier personen.</p>
-                    <button onclick="window.location.href='jw-2229.html'">Meer info</button>
                 </div>
             </div>
         </section>
 
         <section id="zwemspas">
             <h2>Zwemspas</h2>
+            <div class="category-button">
+                <button onclick="window.location.href='zwemspas.html'">Meer zien</button>
+            </div>
             <div class="product-container">
                 <div class="product">
-                    <img src="images/jw-2217_1.jpg" alt="JW-2217">
+                    <img src="images/jw-2217_1.png" alt="JW-2217">
                     <h3>JW-2217</h3>
                     <p>Ruime zwemspa voor het hele gezin.</p>
                     <button onclick="window.location.href='jw-2217.html'">Meer info</button>
-                </div>
-                <div class="product">
-                    <img src="images/jw-2219_1.jpg" alt="JW-2219">
-                    <h3>JW-2219</h3>
-                    <p>Compacte jacuzzi voor intieme ontspanning.</p>
-                    <button onclick="window.location.href='jw-2219.html'">Meer info</button>
                 </div>
             </div>
         </section>

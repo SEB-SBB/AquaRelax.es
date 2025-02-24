@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW-2228 - AquaRelax.es</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .logo {
+            max-width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .image-gallery {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            height: 400px;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: 100%;
+            display: none;
+            object-fit: cover;
+        }
+        .image-gallery img.active {
+            display: block;
+        }
+        .image-gallery .prev-btn, .image-gallery .next-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .image-gallery .next-btn {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .image-gallery .prev-btn:hover, .image-gallery .next-btn:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-info {
+            max-width: 800px;
+            text-align: left;
+        }
+        .specificaties-venster {
+            display: none;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+            max-width: 800px;
+        }
+        .specificaties-knop, .sluit-specificaties-knop, .offerte-aanvragen {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/aquarelax_header_logo.png" alt="AquaRelax Logo" class="logo">
+        <h1>AquaRelax.es</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="zwemspas.html">Zwemspas</a>
+            <a href="jacuzzis.html">Jacuzzi's</a>
+            <a href="ijsbaden.html">IJsbaden</a>
+            <a href="over-ons.html">Over Ons</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <h2>JW-2228 Jacuzzi</h2>
+            <div class="image-gallery">
+                <img src="images/jw-2228-1.png" alt="JW-2228 Afbeelding 1" class="active">
+                <img src="images/jw-2228-2.png" alt="JW-2228 Afbeelding 2">
+                <img src="images/jw-2228-3.png" alt="JW-2228 Afbeelding 3">
+                <button class="prev-btn" onclick="prevImage()">Vorige</button>
+                <button class="next-btn" onclick="nextImage()">Volgende</button>
+            </div>
+            <div class="product-info">
+                <h3>Model NO: JW-2228 (ROTO MOULD SPA TUB)</h3>
+                <p>Creëer uw eigen wellness-oase met de JW-2228 Jacuzzi. Deze luxe spa is ontworpen voor ultieme ontspanning en comfort, met ruimte voor vijf personen (3 zitplaatsen + 2 lounges).</p>
+                <p>De JW-2228 biedt een scala aan voordelen:</p>
+                <ul>
+                    <li><strong>Stressverlichting:</strong> Laat de spanning van de dag wegsmelten in het warme, bruisende water van de JW-2228. De hydromassagejets helpen spierspanning te verminderen en bevorderen een gevoel van diepe ontspanning.</li>
+                    <li><strong>Verbeterde Gezondheid:</strong> Regelmatig gebruik van deze jacuzzi kan de bloedsomloop verbeteren, pijnlijke spieren verlichten en zelfs helpen bij het verbeteren van uw slaapkwaliteit.</li>
+                    <li><strong>Sociale Verbinding:</strong> Creëer een gezellige ontmoetingsplek voor familie en vrienden. Geniet van quality time samen terwijl u ontspant in het warme water.</li>
+                    <li><strong>Luxe in Eigen Huis:</strong> Transformeer uw achtertuin in een privé-oase. De JW-2228 is ontworpen met oog voor detail en biedt een luxueuze uitstraling die elke buitenruimte verfraait.</li>
+                    <li><strong>Aanpasbare Ervaring:</strong> Met opties zoals LED-verlichting, Bluetooth-audio en geavanceerde besturingssystemen, kunt u uw jacuzzi-ervaring volledig personaliseren.</li>
+                    <li><strong>Kwaliteit en Duurzaamheid:</strong> AquaRelax.es gebruikt alleen hoogwaardige materialen en geavanceerde technologieën. De JW-2228 is gebouwd om lang mee te gaan, zodat u jarenlang kunt genieten van uw investering.</li>
+                </ul>
+
+                <button class="specificaties-knop" onclick="toggleSpecifications()">Specificaties</button>
+                <div class="specificaties-venster">
+                    <h4>SPECIFICATIES:</h4>
+                    <ul>
+                        <li>Afmetingen: 2000*2000*800mm</li>
+                        <li>Watercapaciteit: 1000L</li>
+                        <li>Capaciteit: 5 personen (3 zitplaatsen + 2 lounges)</li>
+                        <li>Elektrisch: 110-380V, 50hz/60hz</li>
+                        <li>Besturingssysteem: USA Balboa BP200+TP500</li>
+                        <li>Verwarming: USA Balboa 2KW</li>
+                        <li>Massagepomp: 3HP dubbel snelheid</li>
+                        <li>Totaal aantal jets: 33pcs (304 roestvrij staal)</li>
+                        <li>3.5” rotatie jets: 5pcs</li>
+                        <li>2.5” rotatie jets: 4pcs</li>
+                        <li>2.5” hydrotherapiejets: 16pcs</li>
+                        <li>1” hydrotherapiejets: 8pcs</li>
+                        <li>Constructie: ROTO kuip, PS-omlijsting, roestvrijstalen frame</li>
+                        <li>Filter: 1PC</li>
+                        <li>Ozonizer: 1pc</li>
+                        <li>Perimeter LED-verlichting: 18pcs</li>
+                        <li>Hoofdkussen: 3pcs</li>
+                        <li>Onderwaterverlichting: 5"*1pc</li>
+                        <li>Hoekverlichting: 4pcs</li>
+                        <li>Luchtklep: 3pcs</li>
+                        <li>3/4 drainage: 1pc</li>
+                        <li>Waterverdeler: 1pc</li>
+                    </ul>
+                    <h4>OPTIONELE OPTIES:</h4>
+                    <ul>
+                        <li>Bluetooth MP3 met speakers: $120</li>
+                        <li>Heat preservation cover: $150</li>
+                        <li>Ladder: $60</li>
+                        <li>Cover lift: $150</li>
+                    </ul>
+                    <button class="sluit-specificaties-knop" onclick="toggleSpecifications()">Sluiten</button>
+                </div>
+
+                <div class="options">
+                    <h4>Opties:</h4>
+                    <label><input type="checkbox"> Bluetooth MP3 met speakers: $120</label>
+                    <label><input type="checkbox"> Heat preservation cover: $150</label>
+                    <label><input type="checkbox"> Ladder: $60</label>
+                    <label><input type="checkbox"> Cover lift: $150</label>
+                </div>
+
+                <button class="offerte-aanvragen">Vraag nu een offerte aan!</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AquaRelax.es</p>
+    </footer>
+
+    <script>
+        let currentImageIndex = 0;
+        let images;
+        let interval;
+
+        function showImage(index) {
+            if (index >= images.length) {
+                currentImageIndex = 0;
+            } else if (index < 0) {
+                currentImageIndex = images.length - 1;
+            } else {
+                currentImageIndex = index;
+            }
+            images.forEach((img, idx) => {
+                img.classList.toggle('active', idx === currentImageIndex);
+            });
+        }
+
+        function nextImage() {
+            showImage(currentImageIndex + 1);
+        }
+
+        function prevImage() {
+            showImage(currentImageIndex - 1);
+        }
+
+        function startSlideshow() {
+            interval = setInterval(nextImage, 3000); // Change image every 3 seconds
+        }
+
+        function stopSlideshow() {
+            clearInterval(interval);
+        }
+
+        function toggleSpecifications() {
+            const specificatiesVenster = document.querySelector('.specificaties-venster');
+            specificatiesVenster.style.display = specificatiesVenster.style.display === 'none' || specificatiesVenster.style.display === '' ? 'block' : 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            images = document.querySelectorAll('.image-gallery img');
+            showImage(currentImageIndex);
+            startSlideshow();
+            document.querySelector('.image-gallery').addEventListener('mouseenter', stopSlideshow);
+            document.querySelector('.image-gallery').addEventListener('mouseleave', startSlideshow);
+        });
+    </script>
+</body>
+</html>

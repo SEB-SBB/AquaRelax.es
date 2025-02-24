@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AquaRelax.es</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        </header>
+    <main>
+        <h2>Checkout</h2>
+        <div id="selected-options">
+            <h3>Selected Options:</h3>
+            <ul id="options-list"></ul>
+        </div>
+        </main>
+    <footer>
+        </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectedOptions = JSON.parse(localStorage.getItem('selectedOptions')) || [];
+            const optionsList = document.getElementById('options-list');
+            selectedOptions.forEach(option => {
+                const li = document.createElement('li');
+                li.textContent = option;
+                optionsList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>

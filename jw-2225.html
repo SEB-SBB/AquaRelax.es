@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW-2225 Roto Mold Spa - AquaRelax.es</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ... (rest of CSS remains the same) ... */
+        .product-image {
+            float: left; /* Image on the left */
+            margin-right: 20px;
+            max-width: 400px; /* Adjust as needed */
+        }
+        .product-details {
+            overflow: hidden; /* Clear float */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .order-button {
+            background-color: #007bff; /* Example color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .promo-text {
+            background-color: #f0f0f0; /* Example background color */
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center; /* Center the text */
+        }
+        .benefits {
+            margin-top: 20px;
+        }
+        .benefits ul {
+            list-style-type: disc; /* Use bullet points */
+            margin-left: 20px;
+        }
+        /* Style for the logo */
+        .logo {
+            max-width: 200px; /* Adjust as needed */
+            height: auto;
+            float: left; /* Zorgt ervoor dat het logo linksboven staat */
+            margin-right: 20px; /* Ruimte tussen logo en titel */
+        }
+        header {
+            display: flex; /* Gebruik flexbox voor de header */
+            align-items: center; /* Verticale centrering van logo en titel */
+            padding: 10px; /* Wat padding aan de header toevoegen */
+        }
+        h1 {
+            margin: 0; /* Verwijder standaard marge van de titel */
+        }
+        nav {
+            clear: both; /* Zorgt ervoor dat de navigatie onder het logo en de titel komt */
+            text-align: center; /* Centreert de navigatie */
+        }
+        .image-container {
+            position: relative; /* Needed for positioning buttons */
+            margin-bottom: 20px; /* Space between image and details */
+        }
+
+        .image-buttons {
+            position: absolute;
+            top: 50%; /* Position buttons vertically */
+            transform: translateY(-50%); /* Vertically center buttons */
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: space-between; /* Space buttons evenly */
+            width: 100%; /* Make buttons full width of container */
+        }
+
+        .image-buttons button {
+            background: none; /* Remove background */
+            border: none; /* Remove border */
+            cursor: pointer;
+            font-size: 2em; /* Make arrows larger */
+            padding: 10px; /* Add some padding */
+        }
+    </style>
+    <script>
+        function changeImage(imageNumber) {
+            const productImage = document.querySelector('.product-image');
+            productImage.src = `images/jw-2225-${imageNumber}.png`;
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <img src="images/aquarelax_header_logo.png" alt="AquaRelax Logo" class="logo">
+        <h1>AquaRelax.es</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#zwemspas">Zwemspas</a>
+            <a href="#jacuzzis">Jacuzzi's</a>
+            <a href="#IceBaths">IJsbaden</a>
+            <a href="over-ons.html">Over Ons</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product-details">
+            <h2>JW-2225 Roto Mold Spa</h2>
+
+            <div class="promo-text">
+                <h3>✨ Special Offer! ✨</h3>
+                <p>Get a <strong>10% discount</strong> on the JW-2225 Roto Mold Spa this month only! Create your own backyard oasis.</p>
+                <p>Use code <strong>RELAX10</strong> at checkout.</p>
+            </div>
+
+            <div class="image-container">
+                <img src="images/jw-2225_1.png" alt="JW-2225 Roto Mold Spa" class="product-image">
+                <div class="image-buttons">
+                    <button onclick="changeImage(1)">❮</button>
+                    <button onclick="changeImage(2)">❯</button>
+                    </div>
+            </div>
+
+            <div class="product-details">
+                <div class="benefits">
+                    <h3>Key Benefits of Owning a Spa</h3>
+                    <ul>
+                        <li><strong>Stress Relief:</strong>  Unwind and melt away the tensions of the day.</li>
+                        <li><strong>Muscle Relaxation:</strong> Soothe aches and pains after workouts or long days.</li>
+                        <li><strong>Social Connection:</strong>  Enjoy quality time with family and friends.</li>
+                        <li><strong>Improved Sleep:</strong>  Relaxing in a hot tub before bed can promote better sleep.</li>
+                        <li><strong>Backyard Oasis:</strong>  Create a luxurious retreat in the comfort of your own home.</li>
+                    </ul>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">SPECIFICATION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dimension(mm)</td>
+                            <td>2100*1580*780mm</td>
+                        </tr>
+                        <tr>
+                            <td>Water Capacity</td>
+                            <td>850L</td>
+                        </tr>
+                        <tr>
+                            <td>Capacity(person)</td>
+                            <td>3 person (1 seats + 2 lounges)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">ELECTRICS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Voltage</td>
+                            <td>110-380V, 50hz/60hz</td>
+                        </tr>
+                        <tr>
+                            <td>Control System</td>
+                            <td>(USA Balboa) BP200+TP500</td>
+                        </tr>
+                        <tr>
+                            <td>Massage pump</td>
+                            <td>3HP double speed</td>
+                        </tr>
+                        <tr>
+                            <td>Heater</td>
+                            <td>(USA Balboa) 2KW</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">JET CONFIGURATIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total quantity of jets</td>
+                            <td>29pcs (304 stainless steel)</td>
+                        </tr>
+                        <tr>
+                            <td>2.5” jets</td>
+                            <td>6pcs (rotational *2+direct *4)</td>
+                        </tr>
+                        <tr>
+                            <td>1” hydrotherapy jets</td>
+                            <td>22pcs</td>
+                        </tr>
+                        <tr>
+                            <td>ozone jet</td>
+                            <td>1pc</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">STRUCTURE & PLUMBING</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Shell</td>
+                            <td>ROTO</td>
+                        </tr>
+                        <tr>
+                            <td>Skirt</td>
+                            <td>PS</td>
+                        </tr>
+                        <tr>
+                            <td>Supporting frame</td>
+                            <td>stainless steel</td>
+                        </tr>
+                        <tr>
+                            <td>Filter</td>
+                            <td>1pc</td>
+                        </tr>
+                        <tr>
+                            <td>Ozonizer</td>
+                            <td>1pc</td>
+                        </tr>
+                        <tr>
+                            <td>Perimeter LED lights</td>
+                            <td>14pcs</td>
+                        </tr>
+                        <tr>
+                            <td>corner light</td>
+                            <td>4pcs</td>
+                        </tr>
+                        <tr>
+                            <td>3" underwater lights</td>
+                            <td>1 pc</td>
+                        </tr>
+                        <tr>
+                            <td>Air valve</td>
+                            <td>2pcs</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="options">
+                    <h3>Options</h3>
+                    <p>bluetooth MP3 with speakers: $120</p>
+                    <p>Heat preservation cover: $150</p>
+                    <p>Ladder: $60</p>
+                    <p>Cover lift: $150</p>
+                </div>
+
+                <button class="order-button">ORDER NOW</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AquaRelax.es</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
