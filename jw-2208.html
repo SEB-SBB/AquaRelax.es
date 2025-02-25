@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JW-2208 - AquaRelax.es</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .logo {
+            max-width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .image-gallery {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            height: 400px;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: 100%;
+            display: none;
+            object-fit: cover;
+        }
+        .image-gallery img.active {
+            display: block;
+        }
+        .image-gallery .prev-btn, .image-gallery .next-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .image-gallery .next-btn {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .image-gallery .prev-btn:hover, .image-gallery .next-btn:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-info {
+            max-width: 800px;
+            text-align: left;
+        }
+        .specificaties-venster {
+            display: none;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+            max-width: 800px;
+        }
+        .specificaties-knop, .sluit-specificaties-knop, .offerte-aanvragen {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/aquarelax_header_logo.png" alt="AquaRelax Logo" class="logo">
+        <h1>AquaRelax.es</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="zwemspas.html">Zwemspas</a>
+            <a href="jacuzzis.html">Jacuzzi's</a>
+            <a href="ijsbaden.html">IJsbaden</a>
+            <a href="over-ons.html">Over Ons</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <h2>JW-2208 Jacuzzi</h2>
+            <div class="image-gallery">
+                <img src="images/jw-2208-1.png" alt="JW-2208 Afbeelding 1" class="active">
+                <img src="images/jw-2208-2.png" alt="JW-2208 Afbeelding 2">
+                <img src="images/jw-2208-3.png" alt="JW-2208 Afbeelding 3">
+                <button class="prev-btn" onclick="prevImage()">Vorige</button>
+                <button class="next-btn" onclick="nextImage()">Volgende</button>
+            </div>
+            <div class="product-info">
+                <h3>Model NO: JW-2208</h3>
+                <p>Ervaar Ongekende Luxe met de JW-2208 Jacuzzi!</p>
+                <p>Op zoek naar een manier om te ontsnappen aan de drukte van het dagelijks leven? De JW-2208 Jacuzzi van AquaRelax.es biedt je de ultieme ontspanning en comfort. Met ruimte voor twee personen is deze jacuzzi perfect voor een intieme ontspanningservaring.</p>
+                <p>Waarom kiezen voor de JW-2208?</p>
+                <ul>
+                    <li><strong>Ultieme Ontspanning:</strong> Geniet van de krachtige hydromassagejets die je spieren verwennen en de stress van de dag wegsmelten.</li>
+                    <li><strong>Gezondheidsvoordelen:</strong> Verbeter je bloedsomloop, verlicht spierpijn en geniet van een diepere, herstellende slaap.</li>
+                    <li><strong>Intieme Verbinding:</strong> Creëer een speciale plek voor jou en je partner om samen te ontspannen.</li>
+                    <li><strong>Luxe Ontwerp:</strong> Voeg een vleugje elegantie toe aan je buitenruimte met deze stijlvol ontworpen jacuzzi.</li>
+                    <li><strong>Aanpasbare Ervaring:</strong> Personaliseer je jacuzzi met opties zoals LED-verlichting, Bluetooth-audio en meer.</li>
+                    <li><strong>Kwaliteit en Duurzaamheid:</strong> Gebouwd met hoogwaardige materialen om jarenlang mee te gaan, zodat je kunt blijven genieten van je investering.</li>
+                </ul>
+                <p>Exclusieve Aanbieding!</p>
+                <p>Profiteer nu van onze speciale aanbieding en maak van je achtertuin een privé-spa. De JW-2208 Jacuzzi is tijdelijk beschikbaar met een exclusieve korting!</p>
+
+                <button class="specificaties-knop" onclick="toggleSpecifications()">Specificaties</button>
+                <div class="specificaties-venster">
+                    <h4>SPECIFICATIES:</h4>
+                    <ul>
+                        <li>Afmetingen: 2000*1400*780mm</li>
+                        <li>Watercapaciteit: 550L</li>
+                        <li>Capaciteit: 2 personen (2 lounges)</li>
+                        <li>Elektrisch: 110-380V, 50hz/60hz</li>
+                        <li>Besturingssysteem: USA Balboa BP200G1+TP500</li>
+                        <li>Verwarming: USA Balboa 1PC</li>
+                        <li>Massagepomp: 3HP *1pc 2 speed</li>
+                        <li>Totaal aantal jets: 41pcs (304 roestvrij staal)</li>
+                        <li>3.5” jets (rotatie *2 + direct *2): 4pcs</li>
+                        <li>2.5” jets (rotatie *2 + direct *4): 6pcs</li>
+                        <li>1” hydrotherapiejets: 31pcs</li>
+                        <li>Constructie: Acryl kuip, PS-omlijsting, roestvrijstalen frame</li>
+                        <li>Filter: 1PC</li>
+                        <li>Ozonizer: 1pc</li>
+                        <li>Perimeter LED-verlichting: 15pcs</li>
+                        <li>EVA hoofdkussen: 3pcs</li>
+                        <li>Onderwaterverlichting: 3"*1pc</li>
+                        <li>Luchtklep: 2pcs</li>
+                    </ul>
+                    <h4>OPTIONEEL BALBOA CONTROL SYSTEM:</h4>
+                    <ul>
+                        <li>BP6013G3/BP2100G1+TP600</li>
+                    </ul>
+                    <button class="sluit-specificaties-knop" onclick="toggleSpecifications()">Sluiten</button>
+                </div>
+
+                <div class="options">
+                    <h4>Opties:</h4>
+                    <label><input type="checkbox"> USA Aristech Acrylic</label>
+                    <label><input type="checkbox"> Blower (BP6013G3/BP2100G1)</label>
+                    <label><input type="checkbox"> Bluetooth MP3 met speakers</label>
+                    <label><input type="checkbox"> UV</label>
+                    <label><input type="checkbox"> Heat preservation cover</label>
+                    <label><input type="checkbox"> Cover lift</label>
+                    <label><input type="checkbox"> Ladder</label>
+                    <label><input type="checkbox"> Base</label>
+                    <label><input type="checkbox"> WIFI Module (BP2100)</label>
+                    <label><input type="checkbox"> OPTIONAL BALBOA CONTROL SYSTEM: BP6013G3/BP2100G1+TP600</label>
+                </div>
+
+                <button class="offerte-aanvragen">Vraag nu een offerte aan!</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AquaRelax.es</p>
+    </footer>
+
+    <script>
+        let currentImageIndex = 0;
+        let images;
+        let interval;
+
+        function showImage(index) {
+            if (index >= images.length) {
+                currentImageIndex = 0;
+            } else if (index < 0) {
+                currentImageIndex = images.length - 1;
+            } else {
+                currentImageIndex = index;
+            }
+            images.forEach((img, idx) => {
+                img.classList.toggle('active', idx === currentImageIndex);
+            });
+        }
+
+        function nextImage() {
+            showImage(currentImageIndex + 1);
+        }
+
+        function prevImage() {
+            showImage(currentImageIndex - 1);
+        }
+
+        function startSlideshow() {
+            interval = setInterval(nextImage, 3000); // Change image every 3 seconds
+        }
+
+        function stopSlideshow() {
+            clearInterval(interval);
+        }
+
+        function toggleSpecifications() {
+            const specificatiesVenster = document.querySelector('.specificaties-venster');
+            specificatiesVenster.style.display = specificatiesVenster.style.display === 'none' || specificatiesVenster.style.display === '' ? 'block' : 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            images = document.querySelectorAll('.image-gallery img');
+            showImage(currentImageIndex);
+            startSlideshow();
+            document.querySelector('.image-gallery').addEventListener('mouseenter', stopSlideshow);
+            document.querySelector('.image-gallery').addEventListener('mouseleave', startSlideshow);
+        });
+    </script>
+</body>
+</html>
